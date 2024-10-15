@@ -6,7 +6,13 @@ import ytdl from "@distube/ytdl-core";
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Authorization"],
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
