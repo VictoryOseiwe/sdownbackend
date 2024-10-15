@@ -2,9 +2,12 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import ytdl from "@distube/ytdl-core";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
