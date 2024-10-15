@@ -55,7 +55,7 @@ app.post("/info", async (req, res) => {
 
   try {
     const info = await ytdl.getInfo(videoUrl);
-
+    console.log("awaiting info");
     const videoDetails = {
       title: info.videoDetails.title,
 
